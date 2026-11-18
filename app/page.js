@@ -36,28 +36,36 @@ export default function HomePage() {
       <SiteHeader />
       <main id="inicio">
         <section className="hero">
-          <div className="wrap hero-intro">
-            <div>
-              <p className="eyebrow">Películas solares · Belo Horizonte e região</p>
-              <h1>Arraste e veja o vidro com e sem película.</h1>
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <p className="eyebrow">Películas solares em Belo Horizonte</p>
+              <h1>
+                Tecnologia que protege.
+                <span className="accent">Acabamento que impressiona.</span>
+              </h1>
               <p className="lead">
                 A foto clara é o vidro sem película. A escura é o mesmo vidro com a película.
-                Tecnologia que protege. Acabamento que impressiona.
+                Arraste e veja a diferença no carro, na fachada e na cabine.
               </p>
-            </div>
-            <div>
               <div className="cta-row">
-                <a className="btn btn-wa" href={WA} target="_blank" rel="noopener noreferrer">Pedir orçamento</a>
-                <a className="btn btn-ghost" href="#servicos">Ver serviços</a>
+                <a className="btn btn-brand" href={WA} target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+                <a className="btn btn-ghost" href="#comparar">Ver a comparação</a>
               </div>
-              <ul className="facts">
-                <li><i />Garantia sobre a instalação</li>
-                <li><i />No Cardoso ou no seu endereço</li>
-              </ul>
+            </div>
+            <div className="stage">
+              <CompareSlider
+                before="/bmw.jpg"
+                after="/bmw-com.jpg"
+                afterAlt="SUV cinza com película, vidros escuros"
+                title="Veículo"
+                subtitle="Automotivo"
+                label="Comparar o veículo ao lado do texto"
+                initial={52}
+                frameClass="vehicle"
+              />
             </div>
           </div>
-
-          <div className="wrap ba-grid">
+          <div className="wrap ba-grid" id="comparar">
             <CompareSlider
               before="/bmw.jpg"
               after="/bmw-com.jpg"
@@ -68,7 +76,6 @@ export default function HomePage() {
               initial={52}
               frameClass="vehicle"
             />
-
             <CompareSlider
               before="/fachada-dia.jpg"
               after="/fachada-tarde.jpg"
@@ -116,46 +123,46 @@ export default function HomePage() {
             <div className="services">
               <article className="service">
                 <img src="/bmw-com.jpg" alt="" />
-                <div>
+                <div className="service-body">
                   <h3>Automotivo</h3>
                   <p>Película para todos os vidros do carro, da linha popular às opções de maior desempenho. Também orientamos sobre a transparência permitida por lei.</p>
-                  <a className="more" href={wa("automotiva")} target="_blank" rel="noopener noreferrer">Pedir orçamento automotivo</a>
+                  <a className="more" href={wa("automotiva")} target="_blank" rel="noopener noreferrer">Solicitar orçamento automotivo</a>
+                  <ul>
+                    <li>Aplicação completa (full)</li>
+                    <li>Só laterais e traseiro</li>
+                    <li>Pára-brisa</li>
+                    <li>Retirada de película antiga</li>
+                    <li>Troca de película</li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>Aplicação completa (full)</li>
-                  <li>Só laterais e traseiro</li>
-                  <li>Pára-brisa</li>
-                  <li>Retirada de película antiga</li>
-                  <li>Troca de película</li>
-                </ul>
               </article>
               <article className="service">
                 <img src="/fachada-tarde.jpg" alt="" />
-                <div>
+                <div className="service-body">
                   <h3>Residencial</h3>
                   <p>Janelas e vidros da casa ou apartamento com mais conforto e menos calor dentro dos cômodos.</p>
-                  <a className="more" href={wa("residencial")} target="_blank" rel="noopener noreferrer">Pedir orçamento residencial</a>
+                  <a className="more" href={wa("residencial")} target="_blank" rel="noopener noreferrer">Solicitar orçamento residencial</a>
+                  <ul>
+                    <li>Controle de calor e claridade</li>
+                    <li>Privacidade</li>
+                    <li>Blackout para quartos</li>
+                    <li>Proteção contra raios UV</li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>Controle de calor e claridade</li>
-                  <li>Privacidade</li>
-                  <li>Blackout para quartos</li>
-                  <li>Proteção contra raios UV</li>
-                </ul>
               </article>
               <article className="service">
                 <img src="/maquina.jpg" alt="" />
-                <div>
+                <div className="service-body">
                   <h3>Empresas</h3>
                   <p>Escritórios, lojas e frotas com aplicação combinada no horário que atrapalha menos o seu dia.</p>
-                  <a className="more" href={wa("para empresa")} target="_blank" rel="noopener noreferrer">Pedir orçamento para empresa</a>
+                  <a className="more" href={wa("para empresa")} target="_blank" rel="noopener noreferrer">Solicitar orçamento para empresa</a>
+                  <ul>
+                    <li>Escritórios e fachadas</li>
+                    <li>Frotas de veículos</li>
+                    <li>Cabines e máquinas</li>
+                    <li>Atendimento no local</li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>Escritórios e fachadas</li>
-                  <li>Frotas de veículos</li>
-                  <li>Cabines e máquinas</li>
-                  <li>Atendimento no local</li>
-                </ul>
               </article>
             </div>
           </div>
@@ -266,33 +273,34 @@ export default function HomePage() {
           <div className="wrap contact">
             <div>
               <p className="eyebrow">Contato</p>
-              <p className="big">Conte o que você precisa e receba o orçamento no WhatsApp.</p>
+              <h2>Quer película no seu vidro?</h2>
+              <p className="lead">O orçamento sai no WhatsApp. Para carro, mande modelo e ano. Para casa ou empresa, mande fotos ou as medidas.</p>
               <div className="cta-row">
-                <a className="btn btn-wa" href={WA} target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
-                <a className="btn btn-ghost" href="https://www.instagram.com/brfiilms" target="_blank" rel="noopener noreferrer">Ver trabalhos no Instagram</a>
+                <a className="btn btn-brand" href={WA} target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+                <a className="btn btn-ghost" href="https://www.instagram.com/brfiilms" target="_blank" rel="noopener noreferrer">Instagram</a>
               </div>
-              <dl>
-                <div>
-                  <dt>WhatsApp</dt>
-                  <dd><a href="tel:+5531985000242">(31) 98500-0242</a></dd>
-                </div>
-                <div>
-                  <dt>Instagram</dt>
-                  <dd><a href="https://www.instagram.com/brfiilms" target="_blank" rel="noopener noreferrer">@brfiilms</a></dd>
-                </div>
-                <div>
-                  <dt>Endereço do espaço</dt>
-                  <dd>
-                    Rua Augusto Muniz, 350A<br />
-                    Cardoso, Belo Horizonte, MG<br />
-                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Augusto+Muniz+350A+Cardoso+Belo+Horizonte+MG" target="_blank" rel="noopener noreferrer">Abrir no Google Maps</a>
-                  </dd>
-                </div>
-                <div>
-                  <dt>Atendimento</dt>
-                  <dd>No espaço, com agendamento, ou no seu endereço em toda a região metropolitana de Belo Horizonte.</dd>
-                </div>
-              </dl>
+            <dl className="contact-line">
+              <div>
+                <dt>WhatsApp</dt>
+                <dd><a href="tel:+5531985000242">(31) 98500-0242</a></dd>
+              </div>
+              <div>
+                <dt>Instagram</dt>
+                <dd><a href="https://www.instagram.com/brfiilms" target="_blank" rel="noopener noreferrer">@brfiilms</a></dd>
+              </div>
+              <div>
+                <dt>Espaço</dt>
+                <dd>
+                  Rua Augusto Muniz, 350A · Cardoso, BH
+                  <br />
+                  <a href="https://www.google.com/maps/search/?api=1&query=Rua+Augusto+Muniz+350A+Cardoso+Belo+Horizonte+MG" target="_blank" rel="noopener noreferrer">Abrir no mapa</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Atendimento</dt>
+                <dd>No espaço ou no seu endereço</dd>
+              </div>
+            </dl>
             </div>
             <div className="map">
               <iframe
