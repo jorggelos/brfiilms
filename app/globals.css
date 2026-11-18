@@ -411,27 +411,35 @@ dd { margin: 4px 0 0; }
 .float-wa svg { width: 34px; height: 34px; }
 
 @media (max-width: 980px) {
-  :root { --header: 92px; }
-  html { scroll-padding-top: 108px; }
-  .brand img { height: 78px; }
+  :root { --header: 88px; }
+  html { scroll-padding-top: 104px; }
+  .brand img { height: 72px; }
   .desk-nav, .topbar > .nav-cta { display: none; }
   .burger { display: inline-block; }
-  .hero-grid, .video-block, .two, .contact, .services { grid-template-columns: 1fr; }
+  .hero-grid, .video-block, .two, .contact, .services, .types, .steps { grid-template-columns: 1fr; }
   .ba-grid { grid-template-columns: 1fr; }
-  .types, .steps { grid-template-columns: 1fr 1fr; }
-  .hero { padding-top: 28px; }
-  .hero h1 { max-width: 12ch; }
-  .stage { margin-top: 0; }
-  .stage .ba { height: 260px; }
-  .ba-grid .ba { height: 62vh; }
+  .hero { padding-top: 20px; }
+  .hero h1 { max-width: none; font-size: clamp(2.15rem, 10.5vw, 3rem); }
+  .sec-head h2, .video-block h2, .contact h2, .two h2 { font-size: clamp(1.9rem, 8vw, 2.7rem); }
+  .stage { margin-top: 8px; }
+  .stage .ba { height: 420px; }
+  .ba-grid .ba { height: min(68vh, 520px); }
+  .service p { min-height: 0; }
+  .nav-panel { background: #060a12; overflow: auto; }
 }
 @media (max-width: 680px) {
-  .wrap { width: min(1160px, calc(100% - 28px)); }
+  .wrap { width: min(1160px, calc(100% - 32px)); }
   .topbar { padding: 0 14px; }
-  .brand img { height: 74px; }
-  section { padding-block: 58px; }
-  .types, .steps, .contact-line { grid-template-columns: 1fr; }
-  .service img { height: 210px; }
+  .brand img { height: 68px; }
+  section { padding-block: 52px; }
+  .contact-line { grid-template-columns: 1fr; }
+  .service img { height: 200px; }
+  .cta-row { flex-direction: column; align-items: stretch; }
+  .cta-row .btn { width: 100%; }
+  .ba-card figcaption { flex-direction: column; align-items: stretch; }
+  .ba-card label { min-width: 0; }
+  .map, .map iframe { min-height: 240px; }
+  summary { align-items: flex-start; line-height: 1.35; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
