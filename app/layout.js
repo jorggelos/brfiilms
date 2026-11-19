@@ -11,7 +11,6 @@ export const metadata = {
   title: "Brfiilms | Películas solares em Belo Horizonte",
   description:
     "Película solar para carro, casa e empresa em Belo Horizonte. Menos calor, menos claridade e mais privacidade, com aplicação e garantia.",
-  icons: { icon: "/logo-nav.png" },
 };
 
 export default function RootLayout({ children }) {
