@@ -421,8 +421,8 @@ dd { margin: 4px 0 0; }
   .hero { padding-top: 20px; }
   .hero h1 { max-width: none; font-size: clamp(2.15rem, 10.5vw, 3rem); }
   .sec-head h2, .video-block h2, .contact h2, .two h2 { font-size: clamp(1.9rem, 8vw, 2.7rem); }
-  .stage { margin-top: 8px; }
-  .stage .ba { height: 420px; }
+  .stage { display: none; }
+  .hero-grid { margin-bottom: 20px; }
   .ba-grid .ba { height: min(68vh, 520px); }
   .service p { min-height: 0; }
   .nav-panel { background: #060a12; overflow: auto; }
