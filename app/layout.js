@@ -1,9 +1,10 @@
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const sans = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+const sans = localFont({
+  src: "./fonts/inter-latin.woff2",
+  weight: "100 900",
+  display: "swap",
   variable: "--font-sans",
 });
 
