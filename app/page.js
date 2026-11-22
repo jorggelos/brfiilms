@@ -113,6 +113,70 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section id="sobre">
+          <div className="wrap two">
+            <div className="about-copy">
+              <p className="eyebrow">Sobre</p>
+              <h2>Quem é a Brfiilms</h2>
+              <p>
+                A Brfiilms aplica película solar em Belo Horizonte. O serviço é para carro, casa e empresa: menos calor, menos claridade e mais privacidade, com o acabamento conferido na entrega.
+              </p>
+              <p>
+                O espaço fica na Rua Augusto Muniz, 350A, no bairro Cardoso. Também vamos até o endereço, em toda a região metropolitana. O combinado é direto pelo WhatsApp, com quem faz o serviço.
+              </p>
+              <p>
+                No orçamento, a gente indica a linha: Película Basic, Carbon ou Window Blue. Também orientamos sobre a transparência permitida nos vidros do veículo. A instalação tem garantia.
+              </p>
+            </div>
+            <aside className="callout">
+              <p className="eyebrow">A empresa</p>
+              <h3>Película no vidro, do combinado à entrega</h3>
+              <ul className="facts">
+                <li>Automotivo, residencial e empresarial</li>
+                <li>Espaço no Cardoso e atendimento na região metropolitana</li>
+                <li>Orçamento pelo WhatsApp, sem intermediário</li>
+                <li>Garantia sobre a instalação</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section id="diferenciais">
+          <div className="wrap">
+            <div className="sec-head">
+              <p className="eyebrow">Diferenciais</p>
+              <h2>O que muda quando a Brfiilms aplica</h2>
+              <p>Não é só a película no vidro. É o cuidado antes, o acabamento na entrega e o combinado direto com quem faz.</p>
+            </div>
+            <div className="diffs">
+              <article>
+                <h3>Acabamento na sua frente</h3>
+                <p>Na entrega, conferimos o corte e o acabamento com você.</p>
+              </article>
+              <article>
+                <h3>Sem intermediário</h3>
+                <p>O orçamento sai no WhatsApp, com quem aplica a película.</p>
+              </article>
+              <article>
+                <h3>No espaço ou no seu endereço</h3>
+                <p>Aplicamos no Cardoso ou vamos até você, na região metropolitana de Belo Horizonte.</p>
+              </article>
+              <article>
+                <h3>Garantia da instalação</h3>
+                <p>Se aparecer problema na aplicação, você chama e a gente avalia o caso.</p>
+              </article>
+              <article>
+                <h3>A linha certa para o vidro</h3>
+                <p>Indicamos Película Basic, Carbon ou Window Blue conforme o calor, a claridade, a privacidade e o custo.</p>
+              </article>
+              <article>
+                <h3>Vidro preparado antes</h3>
+                <p>Protegemos o interior e limpamos o vidro para a película assentar sem poeira.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section id="servicos">
           <div className="wrap">
             <div className="sec-head">
@@ -176,10 +240,10 @@ export default function HomePage() {
               <p>A escolha muda o conforto, a cor e o custo. No atendimento, a gente indica a melhor para o seu caso.</p>
             </div>
             <div className="types">
-              <article className="type comum">
+              <article className="type basic">
                 <div className="swatch" aria-hidden="true" />
                 <div className="body">
-                  <h3>Película comum</h3>
+                  <h3>Película Basic</h3>
                   <p>Reduz a claridade e dá privacidade. Boa opção para quem quer resolver o essencial com bom custo.</p>
                 </div>
               </article>
@@ -187,7 +251,7 @@ export default function HomePage() {
                 <div className="swatch" aria-hidden="true" />
                 <div className="body">
                   <h3>Carbon</h3>
-                  <p>Acabamento fosco e cor estável, com melhor desempenho contra calor e claridade que a película comum.</p>
+                  <p>Acabamento fosco e cor estável, com melhor desempenho contra calor e claridade que a Película Basic.</p>
                 </div>
               </article>
               <article className="type blue">

@@ -7,6 +7,8 @@ import { WA } from "../lib/site";
 const links = [
   ["#inicio", "Início"],
   ["#comparar", "Comparar"],
+  ["#sobre", "Sobre"],
+  ["#diferenciais", "Diferenciais"],
   ["#servicos", "Serviços"],
   ["#peliculas", "Películas"],
   ["#como-funciona", "Processo"],

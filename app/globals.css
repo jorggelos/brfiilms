@@ -143,7 +143,7 @@ h1, h2, h3 {
 
 .hero {
   position: relative;
-  padding: 54px 0 36px;
+  padding: 12px 0 28px;
   overflow: hidden;
 }
 .hero-grid {
@@ -154,14 +154,17 @@ h1, h2, h3 {
   margin-bottom: 42px;
 }
 .hero-copy { margin-bottom: 0; }
-.hero h1 { font-size: clamp(3rem, 5.2vw, 4.6rem); max-width: 12ch; }
+.hero .eyebrow { margin-bottom: 8px; }
+.hero h1 { font-size: clamp(2.7rem, 4.4vw, 3.9rem); max-width: 12ch; line-height: 0.94; }
 .accent {
   display: block;
-  margin-top: 8px;
+  margin-top: 6px;
   color: #4eb2ff;
 }
 .lead { margin-top: 18px; max-width: 42ch; color: var(--muted); font-size: 1.05rem; }
+.hero .lead { margin-top: 12px; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.hero .cta-row { margin-top: 14px; }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -182,7 +185,7 @@ h1, h2, h3 {
 .btn-ghost { background: rgba(180, 205, 230, 0.06); border-color: rgba(190, 210, 230, 0.28); color: var(--silver); }
 .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); }
 
-.stage { margin-top: -108px; }
+.stage { margin-top: -48px; }
 .stage .ba-card { width: 100%; }
 .stage .ba {
   height: 320px;
@@ -324,12 +327,28 @@ section { padding-block: 84px; }
 .type { border-radius: 24px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
 .swatch { height: 110px; position: relative; }
 .swatch::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.22) 48%, transparent 60%); }
-.type.comum .swatch { background: linear-gradient(160deg, #e7eef3, #8e9baa 70%, #667484); }
+.type.basic .swatch { background: linear-gradient(160deg, #e7eef3, #8e9baa 70%, #667484); }
 .type.carbon .swatch { background: linear-gradient(160deg, #5c6874, #2a333c 55%, #12181e); }
 .type.blue .swatch { background: linear-gradient(160deg, #2f6eb8, #12325f 50%, #07101c); }
 .type .body { padding: 22px; }
 .type h3 { font-size: 1.35rem; margin-bottom: 8px; }
 .type p { color: var(--muted); }
+
+.about-copy { display: grid; gap: 14px; }
+.about-copy p { color: var(--muted); max-width: 52ch; }
+.facts { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
+.facts li { display: flex; gap: 10px; align-items: flex-start; }
+.facts li::before { content: ""; width: 7px; height: 7px; margin-top: 0.55em; border-radius: 50%; background: #9ec4ee; flex: none; }
+
+.diffs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.diffs article {
+  padding: 22px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+}
+.diffs h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.diffs p { color: var(--muted); }
 
 .band { border-block: 1px solid var(--line); background: rgba(255, 255, 255, 0.02); }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; list-style: none; margin: 0; padding: 0; counter-reset: step; }
@@ -410,16 +429,20 @@ dd { margin: 4px 0 0; }
 }
 .float-wa svg { width: 34px; height: 34px; }
 
+@media (max-width: 1200px) {
+  .desk-nav, .topbar > .nav-cta { display: none; }
+  .burger { display: inline-block; }
+}
 @media (max-width: 980px) {
   :root { --header: 88px; }
   html { scroll-padding-top: 104px; }
   .brand img { height: 72px; }
-  .desk-nav, .topbar > .nav-cta { display: none; }
-  .burger { display: inline-block; }
-  .hero-grid, .video-block, .two, .contact, .services, .types, .steps { grid-template-columns: 1fr; }
+  .hero-grid, .video-block, .two, .contact, .services, .types, .steps, .diffs { grid-template-columns: 1fr; }
   .ba-grid { grid-template-columns: 1fr; }
-  .hero { padding-top: 20px; }
-  .hero h1 { max-width: none; font-size: clamp(2.15rem, 10.5vw, 3rem); }
+  .hero { padding-top: 4px; }
+  .hero h1 { max-width: none; font-size: clamp(1.85rem, 8.4vw, 2.45rem); }
+  .hero .lead { margin-top: 10px; }
+  .hero .cta-row { margin-top: 12px; }
   .sec-head h2, .video-block h2, .contact h2, .two h2 { font-size: clamp(1.9rem, 8vw, 2.7rem); }
   .stage { display: none; }
   .hero-grid { margin-bottom: 20px; }
