@@ -185,7 +185,7 @@ h1, h2, h3 {
 .btn-ghost { background: rgba(180, 205, 230, 0.06); border-color: rgba(190, 210, 230, 0.28); color: var(--silver); }
 .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); }
 
-.stage { margin-top: 0; display: flex; justify-content: flex-end; }
+.stage { margin-top: -12px; display: flex; justify-content: flex-end; }
 .stage-frame {
   position: relative;
   width: 240px;
