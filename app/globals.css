@@ -143,26 +143,26 @@ h1, h2, h3 {
 
 .hero {
   position: relative;
-  padding: 12px 0 28px;
+  padding: 32px 0 28px;
   overflow: hidden;
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.72fr;
+  grid-template-columns: minmax(0, 1fr) 240px;
   gap: 40px;
-  align-items: center;
+  align-items: start;
   margin-bottom: 42px;
 }
 .hero-copy { margin-bottom: 0; }
 .hero .eyebrow { margin-bottom: 8px; }
-.hero h1 { font-size: clamp(2.7rem, 4.4vw, 3.9rem); max-width: 12ch; line-height: 0.94; }
+.hero h1 { font-size: clamp(2.7rem, 4.4vw, 3.9rem); max-width: none; line-height: 0.94; }
 .accent {
   display: block;
   margin-top: 6px;
   color: #4eb2ff;
 }
 .lead { margin-top: 18px; max-width: 42ch; color: var(--muted); font-size: 1.05rem; }
-.hero .lead { margin-top: 12px; }
+.hero .lead { margin-top: 12px; max-width: none; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 .hero .cta-row { margin-top: 14px; }
 .btn {
@@ -185,13 +185,45 @@ h1, h2, h3 {
 .btn-ghost { background: rgba(180, 205, 230, 0.06); border-color: rgba(190, 210, 230, 0.28); color: var(--silver); }
 .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); }
 
-.stage { margin-top: -48px; }
-.stage .ba-card { width: 100%; }
-.stage .ba {
-  height: 320px;
-  border-radius: 20px;
-  border-color: rgba(255, 255, 255, 0.12);
+.stage { margin-top: 0; display: flex; justify-content: flex-end; }
+.stage-frame {
+  position: relative;
+  width: 240px;
+  aspect-ratio: 9 / 16;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #070b12;
+  border: 1px solid rgba(214, 228, 242, 0.38);
+  box-shadow:
+    0 0 0 7px rgba(8, 16, 28, 0.9),
+    0 22px 46px rgba(0, 0, 0, 0.42),
+    0 0 32px rgba(47, 147, 246, 0.22);
 }
+.stage-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+.sound-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 2;
+  border: 1px solid rgba(214, 228, 242, 0.45);
+  background: rgba(6, 10, 18, 0.78);
+  color: white;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.sound-btn:hover { background: rgba(12, 40, 78, 0.9); }
 
 .ba-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
 .ba-card { margin: 0; }
@@ -439,12 +471,13 @@ dd { margin: 4px 0 0; }
   .brand img { height: 72px; }
   .hero-grid, .video-block, .two, .contact, .services, .types, .steps, .diffs { grid-template-columns: 1fr; }
   .ba-grid { grid-template-columns: 1fr; }
-  .hero { padding-top: 4px; }
+  .hero { padding-top: 16px; }
   .hero h1 { max-width: none; font-size: clamp(1.85rem, 8.4vw, 2.45rem); }
   .hero .lead { margin-top: 10px; }
   .hero .cta-row { margin-top: 12px; }
   .sec-head h2, .video-block h2, .contact h2, .two h2 { font-size: clamp(1.9rem, 8vw, 2.7rem); }
-  .stage { display: none; }
+  .stage { margin-top: 18px; justify-content: center; width: 100%; }
+  .stage-frame { width: min(78%, 280px); }
   .hero-grid { margin-bottom: 20px; }
   .ba-grid .ba { height: min(68vh, 520px); }
   .service p { min-height: 0; }

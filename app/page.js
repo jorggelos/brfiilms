@@ -1,4 +1,5 @@
 import CompareSlider from "../components/CompareSlider";
+import HeroVideo from "../components/HeroVideo";
 import SiteHeader from "../components/SiteHeader";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import { WA, wa } from "../lib/site";
@@ -53,16 +54,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="stage">
-              <CompareSlider
-                before="/bmw.jpg"
-                after="/bmw-com.jpg"
-                afterAlt="SUV cinza com película, vidros escuros"
-                title="Veículo"
-                subtitle="Automotivo"
-                label="Comparar o veículo ao lado do texto"
-                initial={52}
-                frameClass="vehicle"
-              />
+              <HeroVideo />
             </div>
           </div>
           <div className="wrap ba-grid" id="comparar">
