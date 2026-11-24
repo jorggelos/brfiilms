@@ -1,3 +1,5 @@
 node_modules
 .next
 _frames
+assets/*.mp4
+assets/*.MP4
