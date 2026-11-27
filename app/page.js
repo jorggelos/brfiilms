@@ -111,19 +111,23 @@ export default function HomePage() {
               <p className="eyebrow">Sobre</p>
               <h2>Quem é a Brfiilms</h2>
               <p>
-                A Brfiilms aplica película solar em Belo Horizonte. O serviço é para carro, casa e empresa: menos calor, menos claridade e mais privacidade, com o acabamento conferido na entrega.
+                Com <strong>mais de 10 anos de experiência no mercado</strong>, a Brfiilms é especializada na aplicação de películas solares em Belo Horizonte e região metropolitana. Oferecemos soluções para carros, residências e empresas, proporcionando mais conforto térmico, redução da claridade, privacidade e um acabamento de qualidade em cada instalação.
               </p>
               <p>
-                O espaço fica na Rua Augusto Muniz, 350A, no bairro Cardoso. Também vamos até o endereço, em toda a região metropolitana. O combinado é direto pelo WhatsApp, com quem faz o serviço.
+                Nosso espaço está localizado na Rua Augusto Muniz, 350A, no bairro Cardoso, mas também realizamos atendimentos a domicílio em toda a região metropolitana de Belo Horizonte.
               </p>
               <p>
-                No orçamento, a gente indica a linha: Película Basic, Carbon ou Window Blue. Também orientamos sobre a transparência permitida nos vidros do veículo. A instalação tem garantia.
+                Trabalhamos com atendimento direto pelo WhatsApp, oferecendo orientação personalizada para cada necessidade. Durante o orçamento, indicamos a película mais adequada para cada situação, além de orientar sobre os níveis de transparência permitidos pela legislação para os vidros automotivos.
+              </p>
+              <p>
+                Na Brfiilms, você conta com experiência, qualidade na instalação, atenção aos detalhes e garantia no serviço prestado.
               </p>
             </div>
             <aside className="callout">
               <p className="eyebrow">A empresa</p>
               <h3>Película no vidro, do combinado à entrega</h3>
               <ul className="facts">
+                <li>Mais de 10 anos de experiência</li>
                 <li>Automotivo, residencial e empresarial</li>
                 <li>Espaço no Cardoso e atendimento na região metropolitana</li>
                 <li>Orçamento pelo WhatsApp, sem intermediário</li>
@@ -254,6 +258,24 @@ export default function HomePage() {
                 </div>
               </article>
             </div>
+            <article className="ppf" id="ppf">
+              <div className="ppf-swatch" aria-hidden="true" />
+              <div className="body">
+                <p className="eyebrow">PPF · Proteção de peças</p>
+                <h3>PPF: película transparente que protege as peças do seu carro</h3>
+                <p>
+                  O PPF (Paint Protection Film) é uma película transparente e resistente. Aplicamos em peças pequenas do carro que sofrem com riscos do dia a dia, para manter o acabamento original por mais tempo.
+                </p>
+                <ul>
+                  <li>Conchas das maçanetas protegidas contra riscos de unhas, chaves e anéis</li>
+                  <li>Quinas e cantos protegidos contra desgaste e pequenas batidas</li>
+                  <li>Black piano interno protegido, já que risca com facilidade</li>
+                  <li>Telas de multimídia e painéis protegidos contra riscos</li>
+                  <li>Transparente: mantém a aparência original da peça</li>
+                </ul>
+                <a className="more" href={wa("PPF para peças do carro")} target="_blank" rel="noopener noreferrer">Solicitar orçamento de PPF</a>
+              </div>
+            </article>
           </div>
         </section>
       </main>
